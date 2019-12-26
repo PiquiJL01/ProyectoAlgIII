@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoAlgoritmos
 {
-    class Token
+    public abstract class Token
     {
     }
 }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProyectoAlgoritmos
 {
-    public abstract class Box
+    public abstract class Box<Orientation>
     {
-
+        public Status status;
+        public Dictionary<Orientation, Box<Orientation>> Neighborhood;
+        public Token token;
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProyectoAlgoritmos
 {
-    class Status
+    public abstract class Status
     {
+        public  MyProperty { get; set; }
     }
 }
