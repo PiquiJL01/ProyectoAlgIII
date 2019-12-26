@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProyectoAlgoritmos
 {
-    public interface Status
+    public class Square : Box<SquareOrientation>
     {
-        bool IsFree();
 
-        bool Cleanable();
     }
 }

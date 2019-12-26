@@ -8,8 +8,41 @@ namespace ProyectoAlgoritmos
 {
     public abstract class Box<Orientation>
     {
-        public Status status;
-        public Dictionary<Orientation, Box<Orientation>> Neighborhood;
-        public Token token;
+        public Status status { get; set; }
+        public Dictionary<Orientation, Box<Orientation>> Neighborhood = new Dictionary<Orientation, Box<Orientation>>();
+        public Token token { get; set; }
+
+        public bool IsFree()
+        {
+            return status.IsFree();
+        }
+
+        public bool IsFree(Orientation direction)
+        {
+            if (IsFree())
+            {
+                if (Neighborhood[direction] == null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return Neighborhood[direction].IsFree(direction);
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void SetEmpty()
+        {
+            if (status.Cleanable())
+            {
+                token = null;
+
+            }
+        }
     }
 }

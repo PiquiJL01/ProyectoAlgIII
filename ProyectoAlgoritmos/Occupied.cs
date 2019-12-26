@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProyectoAlgoritmos
 {
-    public interface Status
+    public class Occupied : Status
     {
-        bool IsFree();
-
-        bool Cleanable();
+        public bool IsFree()
+        {
+            return false;
+        }
     }
 }
