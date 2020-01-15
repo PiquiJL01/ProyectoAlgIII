@@ -12,5 +12,10 @@ namespace ProyectoAlgoritmos
         {
             return false;
         }
+
+        public bool Cleanable()
+        {
+            return true;
+        }
     }
 }

@@ -36,6 +36,11 @@ namespace ProyectoAlgoritmos
             }
         }
 
+        internal bool InverseIsFree(TriangleOrientation orientation)
+        {
+            throw new NotImplementedException();
+        }
+
         public void SetEmpty()
         {
             if (status.Cleanable())
@@ -43,6 +48,16 @@ namespace ProyectoAlgoritmos
                 token = null;
 
             }
+        }
+
+        public void AddNeighbor(Orientation orientation, Box<Orientation> box)
+        {
+            Neighborhood.Add(orientation, box);
+        }
+
+        public Box<Orientation> GetNeighbor(Orientation orientation)
+        {
+            return Neighborhood[orientation];
         }
     }
 }

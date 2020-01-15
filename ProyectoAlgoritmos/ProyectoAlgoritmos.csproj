@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Box.cs" />
     <Compile Include="Free.cs" />
+    <Compile Include="Hexagon.cs" />
     <Compile Include="Occupied.cs" />
     <Compile Include="Reducer.cs" />
     <Compile Include="Orientation.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="Square.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="Token.cs" />
+    <Compile Include="Triangle.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
